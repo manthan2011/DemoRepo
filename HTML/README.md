@@ -1,1 +1,8 @@
-HEllO WORLD
+<html>
+    <head>
+        <title> WELCOME</title>
+    </head>
+    <body>
+        <h1>Hello World</h1>
+    </body>
+</html>
