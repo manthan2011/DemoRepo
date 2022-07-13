@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Portfolio</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="Profolio.css">
+        <style>
+            table.dataTable thead.sorting:after,
+            table.dataTable thead.sorting:before,
+            table.dataTable thead.sorting_asc:after,
+            table.dataTable thead.sorting_asc:before,
+            table.dataTable thead.sorting_asc_disabled:after,
+            table.dataTable thead.sorting_asc_disabled:before,
+            table.dataTable thead.sorting_desc:after,
+            table.dataTable thead.sorting_desc:before,
+            table.dataTable thead.sorting_desc_disabled:after,
+            table.dataTable thead.sorting_desc_disabled:before {
+                bottom: .5em;
+            }
+        </style>
+        <script>
+            $(document).ready(function () {
+                $('#Projects').DataTable();
+                $('.dataTables_length').addClass('bs-select');
+            });
+        </script>
+    </head>
+    <body>
+        <header id="header" class="fixed-top">
+            <div class="container d-flex align-items-center justify-content-between">
+        
+              <h1 class="logo"><a href="Portfolio.html">Portfolio</a></h1>
+              <nav id="navbar" class="navbar">
+                <ul>
+                  <li><a class="nav-link scrollto active" href="#Introduction">Introduction</a></li>
+                  <li><a class="nav-link scrollto" href="#Projects">Projects</a></li>
+                  <li><a class="nav-link scrollto" href="#Blogs">Blogs</a></li>
+                  <li><a class="nav-link scrollto " href="#Feedback">Feedback </a></li>
+                </ul>
+              </nav>
+            </div>
+        </header>
+        <!--Introduction-->
+        <div id="Introduction" class="Introduction route">
+            <div class="overlay-itro"></div>
+            <div class="hero-content display-table">
+              <div class="table-cell">
+                <div class="container">
+                  
+                  <h1 class="hero-title">I am Manthan Rangani</h1>
+
+                </div>
+              </div>
+            </div>
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                        <div class="numbertext">1 / 3</div>
+                        <img src="22.jpg" style="width:100%" alt="image">
+                        <div class="text">First Slide</div>
+                        </div>
+                    
+                        <div class="mySlides fade">
+                        <div class="numbertext">2 / 3</div>
+                        <img src="8.bmp" style="width:100%" alt="image">
+                        <div class="text">Second Slide</div>
+                        </div>
+                    
+                        <div class="mySlides fade">
+                        <div class="numbertext">3 / 3</div>
+                        <img src="21.jpg" style="width:100%" alt="image">
+                        <div class="text">Third Slide</div>
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+
+        <!--Projects-->
+        <div id="Projects" class="Projects route">
+            <table id="tableContent" aria-describedby="Table" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>Education</th>
+                        <th>School/College</th>
+                        <th>Percentage</th>
+                        <th>Year</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>S.S.C.</td>
+                        <td>Patanjali Vidyalaya</td>
+                        <td>89%</td>
+                        <td>2016</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>H.S.C.</td>
+                        <td>Panini Science School</td>
+                        <td>59%</td>
+                        <td>2018</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>B.E.(IT)</td>
+                        <td>Darshan University</td>
+                        <td>7.69</td>
+                        <td>2022</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!--Blogs-->
+        <div id="Blogs">
+            <h2 class="text">Blogs</h2>
+            <div id="cards">
+                <div class="cards">
+
+                </div>
+            </div>
+        </div>
+
+        <script src="Portfolio.js"></script>
+
+        <!--Feedback-->
+        <div id="Feedback">
+            <form>
+                <h2>Feedback From</h2>
+                <div class="row">
+                    <div class="col-25">
+                        <label>Name</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="name" name="yourname" placeholder="Your name...">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label>Date</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="date" id="date">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label>Feedback Title</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="title"  placeholder="Feedback Title...">
+                    </div>
+                </div>
+                <div class="row">    
+                    <div class="col-25">    
+                      <label>Message Box</label>    
+                    </div>    
+                    <div class="col-75">    
+                      <textarea id="MessageBox" placeholder="Write something.." style="height:200px"></textarea>    
+                    </div>    
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label>Category</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="checkbox" id="Category" name="Category" value="Inquiry"> Inquiry
+                        <input type="checkbox" id="Category" name="Category" value="Request"> Request
+                        <input type="checkbox" id="Category" name="Category" value="Complain"> Complain
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label>Gender</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="radio" id="gender" name="gender" value="male"> Male
+                        <input type="radio" id="gender" name="gender" value="female"> Female
+                        <input type="radio" id="gender" name="gender" value="others"> Others
+                    </div>
+                </div>
+                <div>
+                    <button type="submit" value="Submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
